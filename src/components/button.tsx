@@ -4,14 +4,16 @@ import { View, Text, TouchableOpacity } from "react-native";
 interface Props {
   type?: "blueButton" | "grayButton";
   body: React.ReactNode;
+  width?: string;
+  height?: string;
 }
 
-const Button: React.FC<Props> = ({ type, body }) => {
+const Button: React.FC<Props> = ({ type, body, width, height }) => {
   return (
     <TouchableOpacity
-      className={`flex items-center justify-center rounded-3xl w-20 h-20 ${type === "blueButton" ? "bg-[#256AE0] shadow shadow-black/40" : type === "grayButton" ? "bg-[#444C5C]" : "bg-[#505B6C]"}`}
+      className={`flex items-center justify-center rounded-3xl ${width ? width : "w-20"} ${height ? height : "h-20"} ${type === "blueButton" ? "bg-[#256AE0] shadow shadow-black/40" : type === "grayButton" ? "bg-[#444C5C]" : "bg-[#505B6C]"}`}
     >
-      <Text className="text-white text-3xl">{body}</Text>
+      <Text className="text-white text-4xl font-sans">{body}</Text>
     </TouchableOpacity>
   );
 };
