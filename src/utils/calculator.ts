@@ -1,5 +1,3 @@
-type Operations = "+";
-
 export function handleNumber() {}
 
 export function handleClear() {

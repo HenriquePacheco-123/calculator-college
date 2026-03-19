@@ -11,7 +11,7 @@ interface Props {
 const Button: React.FC<Props> = ({ type, body, width, height }) => {
   return (
     <TouchableOpacity
-      className={`flex items-center justify-center rounded-3xl text-4xl ${width ? width : "w-20"} ${height ? height : "h-20"} ${type === "blueButton" ? "bg-[#256AE0] shadow shadow-black/40" : type === "grayButton" ? "bg-[#444C5C]" : "bg-[#505B6C]"}`}
+      className={`flex items-center justify-center rounded-3xl text-4xl ${width ? width : "w-20"} ${height ? height : "h-20"} ${type === "blueButton" ? "bg-[#256AE0] shadow shadow-black/20" : type === "grayButton" ? "bg-[#444C5C]" : "bg-[#505B6C]"}`}
     >
       <Text className="text-white text-4xl font-sans">{body}</Text>
     </TouchableOpacity>
