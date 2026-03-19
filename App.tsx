@@ -13,11 +13,11 @@ export default function App() {
     Inter_300Light,
     Inter_400Regular,
   });
-
   if (!fontsLoaded) return <ActivityIndicator />;
+
   return (
     <View className="flex-1 justify-end items-center bg-[#303644]">
-      <View className="mb-6 px-6 self-stretch">
+      <View className="mb-4 px-6 self-stretch">
         <Text className="text-[#979AA2] text-2xl font-light text-right">
           5.000 + 12.000
         </Text>
